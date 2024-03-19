@@ -1,0 +1,97 @@
+.form-container {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(120deg, var(--primary), rgb(230, 84, 116));
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  height: 620px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-inline: 20px;
+  gap: 20px;
+  align-items: center;
+  border-radius: 4rem;
+
+  .form-brand{
+    .brand {
+      text-align: center;
+      color: var(--primary);
+    }
+  }
+
+  .form-field {
+    display: grid;
+    gap: 5px;
+    width: 70%;
+
+    label {
+      font-size: 7rem;
+      color: var(--primary);
+    }
+
+    input {
+      height: 35px;
+      padding-left: 4px;
+      border-radius: 1rem;
+      border: 2px solid var(--primary);
+    }
+
+    button {
+      font-size: 6rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 0.3rem;
+      height: 40px;
+
+      &:hover{
+        scale: 1.05;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+      }
+    }
+
+    p {
+      font-size: 5rem;
+      color: var(--primary);
+    }
+
+    a{
+      font-size: 5rem;
+      color: black;
+      text-decoration: underline;
+    }
+
+
+    &:last-child {
+      display: flex;
+
+      p,
+      a {
+        font-size: 5rem;
+      }
+
+      p {
+        color: var(--primary);
+      }
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  form{
+    width: 80%;
+  }
+}

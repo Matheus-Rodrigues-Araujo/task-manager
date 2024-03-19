@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --primary: #3337ff;
+  --pink: #ff2df8;
+  --dark: #04041c;
+  font-size: 4px;
+  font-family: "Itim", cursive;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  background-image: linear-gradient(120deg, var(--primary), rgb(230, 84, 116));
+}
+
+.brand {
+  color: white;
+  font-size: 10rem;
+  font-weight: 800;
+  text-decoration: none;
+
+
+  &:hover{
+    scale: 1.1;
+    transition: .2s ease-in;
+  }
+}
