@@ -1,12 +1,17 @@
-.dashboard {
-  padding-top: 20px;
+main{
   display: grid;
-  grid-template-rows: 60px 1fr 2fr;
+  grid-template-columns: 300px auto;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto 2fr auto;
   gap: 20px;
 
   .dashboard-container {
     width: 80%;
     margin-inline: auto;
+    border-radius: 4rem;
   }
 
   .container-1 {
@@ -21,6 +26,7 @@
       align-items: center;
       padding: 20px;
       gap: 10px;
+      border-radius: 10rem;
 
       a {
         font-size: 6rem;
@@ -30,7 +36,7 @@
     }
   }
 
-  .container-2, .history {
+  .container-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--dark);
@@ -79,8 +85,10 @@
   }
 
   .container-3 {
-    background-color: var(--dark);
-    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
     h3 {
       color: white;
       font-size: 10rem;
@@ -101,79 +109,75 @@
       }
     }
 
-    div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .goals-container,
+    .tasks-container {
+      border-radius: 4rem;
     }
 
-    .tasks-list {
-      font-size: 5.5rem;
-      list-style: none;
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
+    .goals-container {
+      background-color: var(--dark);
+      padding: 40px;
 
-      li {
-        padding: 8px;
-        background-color: white;
-        border-radius: 0.7rem;
+      .goals-list {
+        font-size: 4.5rem;
+        list-style: none;
+        margin-top: 10px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 5px;
 
-        .task-btn {
+        .goal-item {
+          padding: 4px 0px;
+          border-bottom: 1.5px solid white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           color: white;
-          font-size: 6rem;
-          padding: 2px 14px;
-          background-image: linear-gradient(75deg, var(--primary), var(--pink));
-          border: 0;
-          border-radius: 0.7rem;
-          font-family: "Itim", cursive;
 
-          &:hover {
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-            background-image: linear-gradient(
-              75deg,
-              var(--primary),
-              rgb(255 0 148)
-            );
+          .goal-status {
+            height: 15px;
+            width: 30%;
+            border-radius: 2rem;
+            background-color: white;
+
+             .percentage:first-child {
+              background-color: var(--light-green);
+              border-radius: 2rem;
+              height: 100%;
+              width: 80%;
+            }
+
           }
         }
       }
     }
-  }
 
-  .history{
-    .history-link-container {
-      display: flex;
-      justify-content: end;
-      align-items: center;
+    .tasks-container {
+      background-color: var(--dark);
+      padding: 40px;
 
-      button {
-        color: white;
-        font-family: "Itim", cursive;
-        height: 80%;
-        width: 50%;
-        font-size: 7rem;
-        background-image: linear-gradient(75deg, var(--primary), var(--pink));
-        border: 0;
-        border-radius: 0.7rem;
+      div:first-child {
+        background-color: var(--dark);
+      }
 
-        &:hover {
-          cursor: pointer;
-          transition: 0.2s ease-in-out;
-          background-image: linear-gradient(
-            75deg,
-            var(--primary),
-            rgb(255 0 148)
-          );
+      .tasks-list {
+        font-size: 4.5rem;
+        list-style: none;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        li {
+          padding: 4px 0px;
+          color: white;
+          border-bottom: 1.5px solid white;
+          display: flex;
+          justify-content: space-between;
         }
       }
     }
   }
-
 
   .progress {
     background-color: var(--dark);
@@ -198,5 +202,4 @@
       }
     }
   }
-
 }
