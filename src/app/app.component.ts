@@ -11,5 +11,5 @@ import { RegisterComponent } from './components/forms/register/register.componen
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'MeTime';
+  title = 'TimeReady';
 }

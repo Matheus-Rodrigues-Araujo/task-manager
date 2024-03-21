@@ -2,25 +2,26 @@
   <app-sidebar></app-sidebar>
   <div class="dashboard">
     <app-header></app-header>
-
     <div class="dashboard-container quick-menu container-1">
       <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="white"
-          class="bi bi-calendar"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
-          />
-        </svg>
-        <a href=""> Calendar </a>
+        <a href="" title="Calendar" >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="white"
+            class="bi bi-calendar"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+            />
+          </svg>
+          Calendar
+        </a>
       </div>
       <div>
-        <a href="">
+        <a href="" title="Progress" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -34,11 +35,11 @@
               d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
             />
           </svg>
-          In progress</a
+          Progress</a
         >
       </div>
       <div>
-        <a href="">
+        <a href="" title="Goals" >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -56,21 +57,24 @@
       </div>
     </div>
 
-    <div class="dashboard-container new-task-container container-2">
-      <div>
+    <div class="dashboard-container new-task-container">
+      <div
+        style="display: flex; flex-direction: column; justify-content: center"
+      >
         <h3>Have a new task in mind?</h3>
         <p>Enjoy this moment and create a new task!</p>
       </div>
-      <div class="new-task-btn-container">
-        <button>Create Task</button>
-      </div>
+      <a href="" class="new-task-btn">Create Task</a>
     </div>
 
     <div class="dashboard-container container-3">
       <div class="goals-container">
         <div>
           <h3>Goals</h3>
-          <p>Top goals</p>
+          <div style="display: flex; justify-content: space-between">
+            <p>Top goals</p>
+            <a href="">See all</a>
+          </div>
         </div>
         <ul class="goals-list">
           <li class="goal-item">
@@ -156,11 +160,18 @@
         </ul>
       </div>
     </div>
-    <div class="dashboard-container progress container-4">
-      <h3>Timer</h3>
-      <p>Have a quick task? Use the timer!</p>
+    <div class="dashboard-container timer-container">
+      <div class="wrapper-container">
+        <div class="wrapper" >
+          <h3>Timer</h3>
+          <p>Have a quick task? Use the timer!</p>
+          <a href="" class="timer-btn">Use Timer</a>
+        </div>
+        <div class="img-container">
+          <img [src]="timerImg"/>
+        </div>
+      </div>
     </div>
-  <app-footer></app-footer>
-
+    <app-footer></app-footer>
   </div>
 </main>

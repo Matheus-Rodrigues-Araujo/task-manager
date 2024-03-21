@@ -22,10 +22,16 @@ footer {
       color: white;
     }
 
-    div{
+    div {
       display: flex;
       gap: 20px;
     }
-
   }
+
+  @media screen and (max-width: 600px) {
+    & {
+      display: none;
+    }
+  }
+
 }
