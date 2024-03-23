@@ -1,0 +1,43 @@
+.new-task-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--dark);
+  padding: 20px;
+
+  .new-task-btn {
+    display: flex;
+    place-self: end;
+    justify-content: center;
+    align-items: center;
+    margin-block: auto;
+    height: 60px;
+    width: 200px;
+    background-image: linear-gradient(75deg, var(--primary), var(--pink));
+    color: white;
+    font-family: "Itim", cursive;
+    text-decoration: none;
+    font-size: 8rem;
+    border: 0;
+    border-radius: 0.7rem;
+    text-align: center;
+
+    &:hover {
+      scale: 1.02;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      background-image: linear-gradient(
+        75deg,
+        var(--primary),
+        rgb(255 0 148)
+      );
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      grid-template-columns: 1fr 1fr;
+      background-color: var(--dark);
+      padding: 10px;
+    }
+  }
+}

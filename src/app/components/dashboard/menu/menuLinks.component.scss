@@ -1,0 +1,47 @@
+.container-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0px;
+  border: none;
+  div {
+    background-color: var(--dark);
+    border-radius: 10rem;
+    border: 2px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      gap: 5px;
+    }
+
+    &:hover {
+      scale: 1.02;
+      transition: 0.2s ease-in-out;
+      border-color: var(--pink);
+      cursor: pointer;
+      a {
+        color: var(--pink);
+        transition: 0.2s ease-in-out;
+      }
+      svg {
+        fill: var(--pink);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    & {
+      gap: 10px;
+    }
+  }
+}
