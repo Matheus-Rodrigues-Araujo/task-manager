@@ -2,7 +2,6 @@ header {
   background-color: var(--dark);
   display: flex;
   justify-content: center;
-  padding: 20px 0px;
   align-items: center;
   border-bottom: 2px solid var(--primary);
 
@@ -11,7 +10,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 90%;
-
+    border: none;
     h2 {
       color: white;
       font-size: 4.5rem;
@@ -85,7 +84,6 @@ header {
 
   @media screen and (max-width: 600px) {
     & {
-      padding: 10px 0px;
 
       nav {
         justify-content: space-between;

@@ -1,19 +1,19 @@
-:root{
+:root {
   --primary: #3337ff;
   --pink: #ff2df8;
   --dark: #000000;
-  --light-green: #5EE8A5;
+  --light-green: #5ee8a5;
   font-size: 4px;
   font-family: "Itim", cursive;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   overflow-x: hidden;
   background-color: var(--dark);
 }
@@ -24,9 +24,37 @@ body{
   font-weight: 800;
   text-decoration: none;
 
-
-  &:hover{
+  &:hover {
     scale: 1.1;
-    transition: .2s ease-in;
+    transition: 0.2s ease-in;
+  }
+}
+
+.dashboard-container {
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 4rem;
+  border: 2px solid var(--primary);
+  padding: 20px;
+
+  h3,
+  p {
+    color: white;
+  }
+
+  h3 {
+    font-size: 7rem;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 5rem;
+    color: var(--pink);
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      width: 95%;
+    }
   }
 }

@@ -24,29 +24,6 @@ main {
   border-style: solid;
   border-width: 0px 2px 0px 2px;
 
-  .dashboard-container {
-    width: 90%;
-    margin-inline: auto;
-    border-radius: 4rem;
-    border: 2px solid var(--primary);
-    padding: 20px;
-
-    h3,
-    p {
-      color: white;
-    }
-
-    h3 {
-      font-size: 7rem;
-      font-weight: 800;
-    }
-
-    p {
-      font-size: 5rem;
-      color: var(--pink);
-    }
-  }
-
   .container-1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -301,9 +278,6 @@ main {
     & {
       border-width: 0px 0px 0px 0px;
       grid-template-rows: auto auto 0.5fr auto 1fr auto;
-      .dashboard-container {
-        width: 95%;
-      }
     }
 
     .container-3 {
@@ -313,31 +287,5 @@ main {
       }
     }
 
-    .timer-container {
-      grid-template-columns: repeat(1, 1fr);
-
-      .wrapper-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .timer-btn {
-        height: 60px;
-        width: 100%;
-        margin-inline: auto;
-      }
-
-      .img-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-          width: 80px;
-          height: auto;
-        }
-      }
-    }
   }
 }
