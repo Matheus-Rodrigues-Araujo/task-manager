@@ -21,8 +21,8 @@ main {
   gap: 20px;
   border-color: var(--primary);
   border-style: solid;
+  grid-template-rows: 80px 80px repeat(3, auto);
   border-width: 0px 2px 0px 2px;
-
   .container-1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
