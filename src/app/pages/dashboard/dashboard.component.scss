@@ -1,4 +1,4 @@
-main {
+.dashboard {
   display: grid;
   grid-template-columns: 250px auto 250px;
   background-color: var(--dark);
@@ -16,19 +16,22 @@ main {
   }
 }
 
-.dashboard {
-  display: grid;
+main {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   border-color: var(--primary);
   border-style: solid;
   grid-template-rows: 80px 80px repeat(3, auto);
   border-width: 0px 2px 0px 2px;
+
   .container-1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0px;
     border: none;
+    flex: 0.2;
     div {
       background-color: var(--dark);
       border-radius: 10rem;
@@ -76,7 +79,7 @@ main {
     grid-template-columns: 1fr 1fr;
     background-color: var(--dark);
     padding: 20px;
-
+    flex: 0.5;
     .new-task-btn {
       display: flex;
       place-self: end;
@@ -115,7 +118,7 @@ main {
     }
   }
 
-  .container-3 {
+  .activities-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -277,17 +280,9 @@ main {
     & {
       border-width: 0px 0px 0px 0px;
       grid-template-rows: auto auto 0.5fr auto 1fr auto;
-      .dashboard-container {
+      main-container {
         width: 95%;
       }
     }
-
-    .container-3 {
-      .goals-container,
-      .tasks-container {
-        padding: 10px;
-      }
-    }
-
   }
 }

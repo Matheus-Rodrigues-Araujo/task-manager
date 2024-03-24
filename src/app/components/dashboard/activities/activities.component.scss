@@ -1,28 +1,54 @@
-.activities {
+.activities-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   border: none;
   padding: 0px;
-  a {
-    font-size: 6rem;
-    color: white;
-
-    &:hover {
-      color: var(--pink);
-      transition: 0.2s ease-in-out;
-    }
-  }
 
   .goals-container,
   .tasks-container {
     border-radius: 4rem;
+    padding: 20px;
     border: 2px solid var(--primary);
+    a {
+      font-size: 6rem;
+      color: white;
+
+      &:hover {
+        color: var(--pink);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .goals-list,
+  .tasks-list {
+    font-size: 4.5rem;
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .list-item {
+      padding: 4px 0px;
+      border-bottom: 1.5px solid white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: white;
+        width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
   }
 
   .goals-container {
     background-color: var(--dark);
-    padding: 40px;
 
     .goals-list {
       font-size: 4.5rem;
@@ -33,13 +59,6 @@
       gap: 5px;
 
       .goal-item {
-        padding: 4px 0px;
-        border-bottom: 1.5px solid white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-
         .goal-status {
           height: 15px;
           width: 30%;
@@ -59,27 +78,9 @@
 
   .tasks-container {
     background-color: var(--dark);
-    padding: 40px;
 
     div:first-child {
       background-color: var(--dark);
-    }
-
-    .tasks-list {
-      font-size: 4.5rem;
-      list-style: none;
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-
-      li {
-        padding: 4px 0px;
-        color: white;
-        border-bottom: 1.5px solid white;
-        display: flex;
-        justify-content: space-between;
-      }
     }
   }
 
