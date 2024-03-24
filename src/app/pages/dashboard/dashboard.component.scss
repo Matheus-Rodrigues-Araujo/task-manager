@@ -18,7 +18,6 @@ main {
 
 .dashboard {
   display: grid;
-  grid-template-rows: auto auto 0.5fr auto 0.5fr;
   gap: 20px;
   border-color: var(--primary);
   border-style: solid;
@@ -278,6 +277,9 @@ main {
     & {
       border-width: 0px 0px 0px 0px;
       grid-template-rows: auto auto 0.5fr auto 1fr auto;
+      .dashboard-container {
+        width: 95%;
+      }
     }
 
     .container-3 {
