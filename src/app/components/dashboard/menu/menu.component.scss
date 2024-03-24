@@ -1,9 +1,11 @@
-.container-1 {
+.menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0px;
   border: none;
+  flex: 0.3;
+
   div {
     background-color: var(--dark);
     border-radius: 10rem;
@@ -22,6 +24,7 @@
       text-decoration: none;
       display: flex;
       gap: 5px;
+      padding: 10px;
     }
 
     &:hover {

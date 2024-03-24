@@ -5,11 +5,12 @@ import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { NgOptimizedImage } from '@angular/common';
 import { TimerComponent } from '../../components/dashboard/timer/timer.component';
 import { ActivitiesComponent } from '../../components/dashboard/activities/activities.component';
+import { MenuComponent } from '../../components/dashboard/menu/menu.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HeaderComponent,SidebarComponent, ActivitiesComponent, AsideComponent, NgOptimizedImage, TimerComponent],
+  imports: [HeaderComponent,SidebarComponent, ActivitiesComponent, MenuComponent, AsideComponent, NgOptimizedImage, TimerComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
