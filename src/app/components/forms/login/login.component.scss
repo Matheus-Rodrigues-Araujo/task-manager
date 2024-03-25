@@ -14,14 +14,13 @@ form {
   width: 500px;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  margin-inline: 20px;
   gap: 20px;
   align-items: center;
   border-radius: 4rem;
   border: 5px solid var(--pink);
 
   .form-brand{
+    padding-top: 20px;
     .brand {
       text-align: center;
       background: linear-gradient(45deg, var(--pink), var(--primary));
@@ -77,10 +76,14 @@ form {
 
     &:last-child {
       display: flex;
-
+      justify-content: center;
       p,
       a {
-        font-size: 5rem;
+        font-size: 4.5rem;
+
+        @media screen and (max-width:380px){
+          &{font-size: 4rem}
+        }
       }
 
       p {
@@ -89,6 +92,7 @@ form {
       a {
         color: black;
       }
+
     }
   }
 }
@@ -96,6 +100,6 @@ form {
 
 @media screen and (max-width: 600px) {
   form{
-    width: 80%;
+    width: 95%;
   }
 }
