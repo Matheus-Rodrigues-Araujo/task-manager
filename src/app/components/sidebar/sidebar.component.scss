@@ -11,12 +11,10 @@
   margin-top: 10px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   position: fixed;
   .brand-container {
     display: flex;
     width: 100%;
-    // justify-content: center;
 
     a {
       background: linear-gradient(45deg, var(--pink), var(--primary));
