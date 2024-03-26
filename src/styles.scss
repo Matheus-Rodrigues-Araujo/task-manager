@@ -33,9 +33,16 @@ body {
 .dashboard-container {
   width: 90%;
   margin-inline: auto;
-  border-radius: 4rem;
-  border: 2px solid var(--primary);
-  padding: 20px;
+ 
+  .wrapper-container {
+    border-radius: 4rem;
+    border: 2px solid var(--primary);
+    padding: 20px;
+    @media screen and (max-width:600px) {
+      margin: 0px 10px;
+    }
+
+  }
 
   h3,
   p {
@@ -54,7 +61,7 @@ body {
 
   @media screen and (max-width: 600px) {
     & {
-      width: 95%;
+      width: auto;
 
       h3 {
         font-size: 7rem;

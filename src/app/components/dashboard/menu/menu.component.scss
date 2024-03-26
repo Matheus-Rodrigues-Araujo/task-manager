@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0px;
   border: none;
   flex: 0.3;
+  padding: 0px;
 
   div {
     background-color: var(--dark);
@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2px;
 
     a {
       display: flex;
@@ -49,6 +48,13 @@
   @media screen and (max-width: 1050px) {
     & {
       gap: 10px;
+      padding: 0;
     }
   }
+
+  @media screen and (max-width:600px) {
+    margin: 0px 10px;
+  }
+
+
 }
