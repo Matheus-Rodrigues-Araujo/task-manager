@@ -11,8 +11,15 @@ form {
   background-color: #0e0e0e;
   height: 620px;
   width: 500px;
-  border-radius: 4rem;
-  border: 1px solid var(--pink);
+  border: 3px solid transparent; /* Define a borda transparente */
+  border-image: linear-gradient(
+    280deg,
+    var(--primary),
+    var(--pink),
+    var(--primary),
+    var(--pink)
+  );
+  border-image-slice: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,8 +111,7 @@ form {
 
   @media screen and (max-width: 600px) {
     & {
-      margin-inline: 10px;
-      border: none;
+      margin-inline: 25px;
     }
   }
 }
