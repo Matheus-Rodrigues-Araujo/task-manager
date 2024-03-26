@@ -90,5 +90,10 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

@@ -7,6 +7,10 @@
   font-family: "Itim", cursive;
 }
 
+html {
+  zoom: 1;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -38,10 +42,9 @@ body {
     border-radius: 4rem;
     border: 2px solid var(--primary);
     padding: 20px;
-    @media screen and (max-width:600px) {
+    @media screen and (max-width: 600px) {
       margin: 0px 10px;
     }
-
   }
 
   h3,
