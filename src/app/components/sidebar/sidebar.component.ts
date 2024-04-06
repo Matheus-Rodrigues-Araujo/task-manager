@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DropdownComponent } from '../dropdown/dropdown.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [DropdownComponent],
+  imports: [DropdownComponent, NgIf],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
