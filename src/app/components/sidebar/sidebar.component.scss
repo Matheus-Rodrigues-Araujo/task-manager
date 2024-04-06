@@ -1,17 +1,12 @@
 .sidebar {
-  position: relative;
   display: flex;
   justify-content: center;
-  height: 100%;
-
-  @media screen and (max-width: 600px) {
-    display: block;
-  }
 
   .sidebar-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
     @media screen and (max-width: 600px) {
       & {
         flex-direction: row;
@@ -29,33 +24,6 @@
         display: flex;
         gap: 10px;
 
-        span {
-          color: white;
-          font-size: 6rem;
-          text-decoration: none;
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          text-align: left;
-
-          @media screen and (max-width: 1050px) {
-            & {
-              display: none;
-            }
-          }
-        }
-
-        &:hover {
-          svg {
-            fill: var(--pink);
-          }
-          span {
-            background: linear-gradient(45deg, var(--pink), var(--primary));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
       }
 
       @media screen and (max-width: 600px) {
@@ -66,51 +34,6 @@
       fill: white;
       height: 28px;
       width: 28px;
-    }
-
-    .dropdown-container {
-      position: absolute;
-      bottom: 40px;
-      background-color: var(--dark);
-      z-index: 1;
-      flex: 1;
-
-      ul {
-        display: grid;
-        gap: 20px;
-        padding: 8px 5px;
-        border-radius: 1rem;
-        border: 1px solid var(--primary);
-        li {
-          border-bottom: 1px solid var(--primary);
-          list-style: none;
-          display: flex;
-          justify-content: center;
-          padding: 5px 10px;
-          &:last-child {
-            border: none;
-          }
-          a {
-            text-decoration: none;
-            font-size: 5rem;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-        }
-      }
-
-      svg {
-        width: 25px;
-        height: 25px;
-        fill: white;
-      }
-
-      @media screen and (max-width: 600px) {
-        bottom: 80px;
-        right: 10px;
-      }
     }
   }
 
